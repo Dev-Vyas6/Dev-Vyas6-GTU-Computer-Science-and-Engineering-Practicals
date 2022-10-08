@@ -1,0 +1,213 @@
+4.1 AIM: Write a program to print following patterns:
+(i) *
+* *
+* * *
+* * * *
+* * * * * 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int i, j;
+  clrscr();
+  for (i = 0; i < 5; i++) {
+    for (j = 0; j <= i; j++) {
+      printf(" *");
+    }
+    printf("\n");
+  }
+  getch();
+}
+
+(ii) 
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int i, j;
+  clrscr();
+  for (i = 0; i < 5; i++) {
+    for (j = i + 1; j < 5; j++) {
+      printf(" ");
+    }
+    for (j = 0; j <= i; j++) {
+      printf(" * ");
+    }
+    printf("\n");
+  }
+  getch();
+}
+
+(iii) * * * * *
+* * * *
+* * *
+* *
+* 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int i, j;
+  clrscr();
+  for (i = 0; i < 5; i++) {
+    for (j = 2; j <= 6 - i; j++) {
+      printf(" *");
+    }
+    printf("\n");
+  }
+  getch();
+}
+
+4.2 AIM: Write a program to print following patterns: 
+(i) 
+1
+12
+123
+1234
+12345 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int n, j, i;
+  clrscr();
+  printf("Enter the value of Rows: ");
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++) {
+      printf("%d", j + 1)
+    }
+    printf("\n");
+  }
+  getch();
+}
+
+(ii) 
+12345
+1234
+123
+12
+1 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int n, i, j;
+  clrscr();
+  printf("Enter the value of Rows: ");
+  scanf("%d", &n);
+  for (i = n; i >= 1; i--) {
+    for (j = 1; j <= i; j++) {
+      printf("%d", j);
+    }
+    printf("\n");
+  }
+  getch();
+}
+
+(iii)
+55555
+4444
+333
+22
+1 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int n, i, j, k;
+  clrscr();
+  printf("Enter the value of Rows: ");
+  scanf("%d", &n);
+  k = n;
+  for (i = n; i >= 1; i--) {
+    for (j = 1; j <= i; j++) {
+      printf("%d", k);
+    }
+    k--;
+    printf("\n");
+  }
+  getch();
+}
+
+(iv) 
+1
+22
+333
+4444
+55555 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int n, i, j;
+  clrscr();
+  printf("Enter the value of Rows: ");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    for (j = 1; j <= i; j++) {
+      printf("%d", i);
+    }
+    printf("\n");
+  }
+  getch();
+}
+
+4.3 AIM: Write a program to print following patterns: 
+ 
+(i) 
+AAAAA
+BBBB
+CCC
+DD
+E 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int n, i, j;
+  char k;
+  clrscr();
+  printf("Enter the value of Rows: ");
+  scanf("%d", &n);
+  k = 'A';
+  for (i = n; i >= 1; i--) {
+    for (j = 1; j <= i; j++) {
+      printf("%c", k);
+    }
+    k++;
+    printf("\n");
+  }
+  getch();
+}
+
+(ii)
+ABCDE
+ABCD
+ABC
+AB
+A 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int n, i, j;
+  char k;
+  clrscr();
+  printf("Enter the value of Rows: ");
+  scanf("%d", &n);
+  for (i = 1; i <= n; i++) {
+    k = 'A';
+    for (j = 1; j <= n - i + 1; j++) {
+      printf("%c", k);
+      k++;
+    }
+    printf("\n");
+  }
+  getch();
+}
