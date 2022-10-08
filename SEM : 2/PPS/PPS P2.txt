@@ -1,0 +1,175 @@
+2.1 Aim:  Write a C program to find that the accepted number is Negative, or Positive or Zero. 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int num;
+  printf("Enter any number:");
+  scanf("%d", &num);
+  if (num > 0)
+  {
+    printf("The number%d is Positive", num);
+  }
+  if (num < 0)
+  {
+    printf("The number%d is Negative", num);
+  }
+  if (num == 0)
+  {
+    printf("The number%d is Zero", num);
+  }
+  getch();
+}
+
+2.2 Aim: Write a program to read marks of a student from keyboard whether the student is pass or fail. (using if else) 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int marks;
+  printf("Enter marks of a Student:");
+  scanf("%d", &marks);
+  if (marks >= 23)
+  {
+    printf("The Student is Pass");
+  }
+  else
+  {
+    printf("The Student is Fail");
+  }
+  getch();
+}
+
+2.3 Aim: Write a program to read three numbers from keyboard and find out maximum out of these three.  (Nested if else) 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int a, b, c;
+  clrscr();
+  printf("Enter three numbers:");
+  scanf("%d%d%d", &a, &b, &c);
+  if (a >= b && a >= c) {
+    printf("Largest number=%d", a);
+  } else if (b >= a && b >= c) {
+    printf("Largest number=%d", b);
+  } else {
+    printf("Largest number=%d", c);
+  }
+  getch();
+}
+
+2.4 Aim: Write a C program to check whether the entered character is capital, small letter, digit or any special character. 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  char ch;
+  clrscr();
+  printf("Enter any character:");
+  scanf("%c", &ch);
+  if (ch >= 65 && ch <= 90) {
+    printf("\nThe Character is Capital letter");
+  } else if (ch >= 97 && ch <= 122) {
+    printf("\nThe Character is Small letter");
+  } else if (ch >= 48 && ch <= 57) {
+    printf("\nThe character is digit");
+  } else if ((ch >= 0 && ch <= 47) || (ch >= 58 && ch <= 64) ||
+             (ch >= 91 && ch <= 96) || (ch >= 123 && ch <= 126)) {
+    printf("\nThe Character is Special character");
+  } else {
+    printf("\nThe Character is invalid");
+  }
+  getch();
+}
+
+2.5 Aim: Write a program to read marks from keyboard and your program should display equivalent grade according to following table. (if else ladder) 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int marks;
+  clrscr();
+  printf("Enter the Marks:");
+  scanf("%d", &marks);
+  if (marks >= 80 && marks <= 100) {
+    printf("\nDistinction");
+  } else if (marks >= 60 && marks <= 79) {
+    printf("\nFirst Class");
+  } else if (marks >= 40 && marks <= 59) {
+    printf("\nSecond Class");
+  } else if (marks < 40) {
+    printf("\nFail");
+  }
+
+  else {
+    printf("Enter valid marks");
+  }
+  getch();
+}
+
+2.6 Aim: Write a c program to prepare pay slip using following data. 
+Da = 10% of basic, Hra = 7.50% of basic, Ma = 300,  
+Pf = 12.50% of basic, Gross = basic + Da + Hra + Ma,  Nt = Gross – Pf.
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  float basic, Da, Hra, Ma = 300, Pf, Gross, Nt;
+  clrscr();
+  printf("---------------------------------------------------------------------"
+         "---------\n");
+  printf("Basic Salary=");
+  scanf("%f", &basic);
+  Da = 0.1 * basic;
+  Hra = 0.075 * basic;
+  Pf = 0.125 * basic;
+  Gross = basic + Da + Hra + Ma;
+  Nt = Gross - Pf;
+printf("Duty Allowance(DA)=%f\nHouse and Rent
+Allowance(HRA)=%f\nMonthly Allowance(MA)=%f, Provident
+Fund(PF)=%f",Da,Hra,Ma,Pf); 
+printf("\n------------------------------------------------------------------------------\n"); 
+printf("\n------------------------------------------------------------------------------\n");
+printf("Gross Salary=%f\n===========================\nNet   
+Salary=%f",Gross,Nt); 
+getch();
+}
+
+2.7 Aim: Write a C program to read no 1 to 7 and print relatively day Sunday to Saturday. 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int ch;
+  clrscr();
+  printf("Enter number between 1 to 7 to print relatively day Sunday to Saturday:");
+  scanf("%d", &ch);
+  switch (ch) {
+  case 1:
+    printf("\nSunday");
+    break;
+  case 2:
+    printf("\nMonday");
+    break;
+  case 3:
+    printf("\nTuesday");
+    break;
+  case 4:
+    printf("\nWednesday");
+    break;
+  case 5:
+    printf("\nThursday");
+    break;
+  case 6:
+    printf("\nFriday");
+    break;
+  case 7:
+    printf("\nSaturday");
+    break;
+  default:
+    printf("\nEnter valid number between 1 to 7");
+    break;
+  }
+  getch();
+}
