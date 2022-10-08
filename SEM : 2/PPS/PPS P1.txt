@@ -1,0 +1,129 @@
+1.1 Aim:  Write a program to that performs as calculator ( addition, multiplication,division, subtraction).  
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ int a,b,mul,add,sub,mod;
+ float div;
+ clrscr();
+ printf("Enter the two number");
+ scanf("%d%d",&a,&b);
+ add=a+b;
+ sub=a-b;
+ mul=a*b;
+ div=a/b;
+ mod=a%b;
+ printf("\nAddition=%d \nSubstraction=%d",add,sub);
+ printf("\nMultiplication=%d \nDivision=%f 
+ \nModulo=%d",mul,div,mod);
+ getch();
+}
+
+1.2 Aim:  Write a program to find area of triangle (a=h*b*.5) a = area, h = height, b = base
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ float a,b,h;
+ clrscr();
+ printf("Enter Value of Height:");
+ scanf("%f",&h);
+ printf("\nEnter Value of Base:");
+ scanf("%f",&b);
+ a=b*h*0.5;
+ printf("\nArea of Triangle=%f",a);
+ getch();
+}
+
+1.3 Aim:  Write a program to calculate simple interest (i = (p*r*n)/ 100)
+i = Simple interest 
+p = Principal amount
+r = Rate of interest
+n = Number of years
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	float i,p,r,n; 
+	clrscr(); 
+	printf("Principal amount:"); 
+	scanf("%f",&p); 
+	printf("\nRate of intrest:"); 
+	scanf("%f",&r); 
+	printf("\nNumber of years:"); 
+	scanf("%f",&n); 
+	i=(p*r*n)/100; 
+	printf("\nSimple interest=%f",i); 
+	getch(); 
+}
+
+1.4 Aim:  Write a C program to interchange two numbers 
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int a=4,b=6,t; 
+	clrscr(); 
+	printf("Value of a:%d\nValue of b:%d",a,b); 
+	t=a; 
+	a=b; 
+	b=t; 
+	printf("\nAfter interchange\nValue of a=%d\nValue of b=%d",a,b); 
+	getch(); 
+}
+
+1.5 Aim:  Write a C program to enter a distance in to kilometer and convert it in to meter, feet, inches and centimeter. 
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	float D_km,D_m,D_f,D_i,D_cm; 
+	printf("\nEnter Distance in Kilometers\n"); 
+	scanf("%f",&D_km); 
+	D_m=D_km*1000; 
+	D_f=D_km*3280.84; 
+	D_i=D_km*39370; 
+	D_cm=D_km*100000; 
+	printf("After conversion of%fkm result:-\n",D_km); 
+	printf("\nMeter=%.2fm\n",D_m); 
+	printf("Feet=%f ft\n Inches=%f in\n",D_f,D_i); 
+	printf("Centimeter=%.3f cm",D_cm); 
+	getch(); 
+}
+
+1.6 Aim:  Write a program to compute from centigrade (f=1.8*c +32) 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  float c, f;
+  clrscr();
+  printf("Enter value of Centigrade:");
+  scanf("%f", &c);
+  f = 1.8 * c + 32;
+  printf("\nValue of Fahrenheit =%f", f);
+  getch();
+}
+
+1.7 Aim:  Write a C program to find out distance travelled by the equation d = ut + at^2 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  float u, t, a, d;
+  clrscr();
+  printf("Enter Value of u:");
+  scanf("%f", &u);
+  printf("\nEnter Value oft:");
+  scanf("%f", &t);
+  printf("\nEnter Value of a:");
+  scanf("%f", &a);
+  d = (u * t) + (a * t * t);
+  printf("\nValue of d=%f", d);
+  getch();
+}
