@@ -1,0 +1,86 @@
+5.1 AIM: Write a C program to read and store the roll no and marks of 20 students using array. 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int r[20], m[20], i;
+  clrscr();
+  for (i = 0; i < 20; i++) {
+    printf("Enter Roll no of Student[%d]: ", i + 1);
+    scanf("%d", &r[i]);
+    printf("Enter Marks of Student[%d]: ", i + 1);
+    scanf("%d", &m[i]);
+  }
+  for (i = 0; i < 20; i++) {
+    printf("\n Roll No: %d  Marks: %d", r[i], m[i]);
+  }
+  getch();
+}
+
+5.2 AIM: Write a program to find out which number is even or odd from list of 10 numbers using array. 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int n[10], i;
+  clrscr();
+  for (i = 0; i <= 9; i++) {
+    printf("Enter the Number: ", i + 1);
+    scanf("%d", &n[i]);
+  }
+  for (i = 0; i <= 9; i++) {
+    if (n[i] % 2 == 0)
+      printf("\n Number %d is Even.", n[i]);
+    else
+      printf("\n Number %d is Odd.", n[i]);
+  }
+  getch();
+}
+
+5.3 AIM: Write a program to find maximum element from 1-Dimensional array. 
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  int i, n, max, a[50];
+  clrscr();
+  printf("Enter the Numbers that you want add: ", n);
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    printf("Enter value in Array at position[%d]:", i + 1);
+    scanf("%d", &a[i]);
+    if (i == 0)
+      max = a[i];
+    else {
+      if (max < a[i]) {
+        max = a[i];
+      }
+    }
+  }
+  printf("\n Maximum value in Array= %d", max);
+  getch();
+}
+
+5.4 AIM: Write a C program to calculate the average, geometric and harmonic mean of n elements in an array. 
+
+#include <conio.h>
+#include <math.h>
+#include <stdio.h>
+void main() {
+  float a[50], x = 0, y = 0, z = 1;
+  int i, n;
+  clrscr();
+  printf("Enter the number that you want to add: ", n);
+  scanf("%d", &n);
+  for (i = 0; i < n; i++) {
+    printf("Enter value at position[%d]: ", i + 1);
+    scanf("%f", &a[i]);
+    x = x + a[i];
+    y = y + (1.0 / a[i]);
+    z = z * a[i];
+  }
+  printf("\n Average= %.3f", x / n);
+  printf("\n Harmonic mean= %.3f", n * pow(y, -1));
+  printf("\n Geometric mean= %.3f", pow(z, (1.0 / n)));
+  getch();
+}
