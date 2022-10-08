@@ -1,0 +1,121 @@
+6.1 Aim: Write a program to find a character from given string.
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  char str[20], ch;
+  int i, flag = 1
+  printf(“\n Enter String : ”);
+  gets(str);
+  printf(“Enter Character to Search in String : ”);
+  scanf(“% c”, &ch);
+  printf(“\n Character is ”);
+  for (i = 0; str[i] !=‘\0’; i++)
+  {
+    if (str[i] == ch)
+    {
+      printf(“FOUND at position % d ”, i + 1);
+      flag = 0;
+    }
+  }
+  if (flag == 1)
+  {
+    printf(“NOT FOUND”);
+  }
+  getch();
+}
+
+6.2 Aim : Write a program to replace a character in given string. 
+
+#include <stdio.h>
+#include <string.h>
+void main() {
+  char str[50], ch, Newch;
+  int i;
+  printf(“\n Please Enter any String : ”);
+  gets(str);
+printf(“\n Please Enter the Character that you want to Search for: ”);
+scanf(“% c”, &ch);
+getchar();
+printf(“\n Please Enter the New Character : ”);
+scanf(“% c”, &Newch);
+for (i = 0; i <= strlen(str); i++)
+{
+  if (str[i] == ch)
+  {
+    str[i] = Newch;
+  }
+}
+printf(“\n The final string after replacing all occurrences of ‘% c’ with ‘% c’ = % s”, ch, Newch, str);
+getch();
+}
+
+6.3 Aim : Aim: Write a program to delete a character in given string. 
+
+#include <conio.h>
+#include <stdio.h>
+#include <string.h>
+void main() {
+
+  char str[50], ch;
+
+  int i, j, len;
+
+  len = strlen(str);
+
+  printf(“\n Please Enter any String : ”);
+  gets(str);
+  printf(“\n Please Enter the Character that you want to Remove : ”);
+  scanf(“% c”, &ch);
+  for (i = 0; i < len; i++) {
+    if (str[i] == ch)
+    {
+      for (j = i; j < len; j++)
+      {
+        str[j] = str[j + 1];
+      }
+      len--;
+      i--;
+    }
+  }
+  printf(“\n The final string after removing all occurrences of ‘% c’ = % s”, ch, str) 
+getch();
+}
+
+6.4 Aim : Write a program to reverse the given string. 
+
+#include <conio.h>
+#include <stdio.h>
+#include <string.h>
+void main() {
+  char mystr[50];
+  int len, g;
+  printf(“Please insert the string you want to reverse : ”);
+  scanf(“% s”, mystr);
+  len = strlen(mystr);
+  for (g = len - 1; g >= 0; g--)
+  {
+    printf(“% c”, mystr[g]);
+  }
+  getch();
+}
+
+6.5 Aim: Write a program to convert string into upper case.
+
+#include <conio.h>
+#include <stdio.h>
+void main() {
+  char str[50];
+  int i;
+  printf(“\n Enter any string : ”);
+  gets(str);
+  for (i = 0; str[i] !=‘\0’; i++)
+  {
+    if (str[i] >= ‘a’ && str[i] <= ‘z’)
+    {
+      str[i] = str[i] - 32;
+    }
+  }
+  printf(“\nUpper Case String = % s”, str);
+  getch();
+}
